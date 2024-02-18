@@ -76,14 +76,14 @@
       >
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
-            <h1 class="mb-5 text-4xl font-bold">
+            <h1 class="mb-5 p-5 text-4xl font-bold">
               <p>End-to-End Travel with</p>
-              <p class="color-green">Goriber-Ticket</p>
+              <p class="color-green">Goriber-Parhibahan</p>
             </h1>
             <p class="mb-5">
               We are trusted Ticket booking site over 10 years in your nation
             </p>
-            <a href="#seat"><button class="btn bg-green border-none">Buy tickets</button></a>
+            <a href="#ticket"><button class="btn bg-green border-none">Buy tickets</button></a>
           </div>
         </div>
       </div>
@@ -133,7 +133,7 @@
       </div>
 
       <div class="bg-[#F7F8F8] border">
-        <div class="text-center pt-24">
+        <div id="ticket" class="text-center pt-24">
           <h1 class="font-raleway text-4xl font-bold">Dour Paribahan</h1>
           <p class="font-inter">
             Lets roll over the road with pleasure.Yout ticket is ready to
@@ -194,7 +194,7 @@
 
       <!-- Seat section starts here -->
 
-      <div id="seat" class="container flex justify-between mx-auto lg:px-24 px-8 my-8">
+      <div id="seat" class="container bg-[#F7F8F8] flex justify-between mx-auto lg:px-24 px-8 my-8">
         <!-- left -->
         <div class="">
           <p class="font-semibold text-2xl">select Your Seat</p>
@@ -294,11 +294,16 @@
               <p>Total Price</p>
               <span id="total-price">0</span>
             </div>
+            <div class="flex justify-between">
+              <p>Discounted amount</p>
+              <span id="discount-amount">0</span>
+            </div>
+
             <div
               class=" my-5 bg-white rounded-lg justify-between flex "
             >
-              <input id="" class="px-2" type="text" name="" id="" placeholder="Have any copupon?" />
-              <button class="rounded-md bg-[#1dd100] px-4 text-white">
+              <input id="coupon" class="px-2" type="text" name="" id="" placeholder="Have any copupon?" />
+              <button id="apply" class="rounded-md bg-[#1dd100] px-4 text-white">
                 Apply
               </button>
             </div>

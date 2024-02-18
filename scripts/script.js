@@ -45,7 +45,7 @@ for (const btn of btnElement) {
       li.appendChild(p3)
 
       appendContainer.appendChild(li)
-      console.log(appendContainer);
+    //   console.log(appendContainer);
 
         const totalPrice = document.getElementById("total-price").innerText;
         let convertedTotalPrice=parseInt(totalPrice);
@@ -54,7 +54,31 @@ for (const btn of btnElement) {
 
         document.getElementById("total-price").innerText=sum;
 
-        
+        document.getElementById("grand-total").innerText = sum;
+
+
+        let grandTotal=0;
+
+        document.getElementById('apply').addEventListener('click',function(){
+            const couponText = document.getElementById("coupon").value;
+            console.log(couponText);
+
+            if(couponText === "NEW15" && count >=0){
+                grandTotal=sum*.85;
+                document.getElementById("grand-total").innerText=grandTotal;
+                //  const discountPriceText =
+                //    document.getElementById("discount-amount").innerText;
+                //    discountPriceText=grandTotal; 
+                
+            }
+            else {
+                console.log('pani kha');
+                alert('Not eligible')
+            }
+            
+
+        })
+
 
         // console.log(sum);
 
@@ -68,3 +92,4 @@ for (const btn of btnElement) {
     }
   });
 }
+
