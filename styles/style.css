@@ -37,3 +37,7 @@ border-radius: 120px 120px 0px 0px;
 
 }
 
+.appned-li li{
+  display: flex;
+  justify-content: space-between;
+}
