@@ -4,10 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
 </head>
 <body>
-    <button disabled id="apply" class="rounded-md bg-[#1dd100] px-4 text-white">
-                Apply
-              </button>
+<!-- The button to open modal -->
+<a href="#my_modal_8" class="btn hidden">open modal</a>
+<!-- Put this part before </body> tag -->
+<div class="modal" role="dialog" id="my_modal_8">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg">Hello!</h3>
+    <p class="py-4">This modal works with anchor links</p>
+    <div class="modal-action">
+     <a href="#" class="btn">Yay!</a>
+    </div>
+  </div>
+</div>
 </body>
 </html>

@@ -6,6 +6,9 @@ let totalSeatLeft = 40;
 let sum = 0;
 const ticketPrice = 550;
 
+// console.log(document.getElementById("number").value.length);
+
+
 for (const btn of btnElement) {
   btn.addEventListener("click", function (event) {
     count++;
@@ -52,43 +55,50 @@ for (const btn of btnElement) {
 
       document.getElementById("grand-total").innerText = sum;
 
+      //coupon section
       let grandTotal = 0;
 
-        if(count==4){
-            document.getElementById("apply").disabled = false;
-             document
-               .getElementById("apply")
-               .addEventListener("click", function () {
-                 const couponText = document.getElementById("coupon").value;
-                 console.log(couponText);
+      if (count == 4) {
+        document.getElementById("apply").disabled = false;
+        document.getElementById("apply").addEventListener("click", function () {
+          const couponText = document.getElementById("coupon").value;
+          console.log(couponText);
 
-                 if (couponText === "NEW15" && count >= 4) {
-                   grandTotal = sum * 0.85;
-                   document.getElementById("grand-total").innerText =
-                     grandTotal;
+          if (couponText === "NEW15" && count >= 4) {
+            grandTotal = sum * 0.85;
+            document.getElementById("grand-total").innerText = grandTotal;
 
-                     document.getElementById("apply-coupon").classList.add('hidden');
-                   //  const discountPriceText =
-                   //    document.getElementById("discount-amount").innerText;
-                   //    discountPriceText=grandTotal;
-                 }
-                  else if (couponText === "Couple 20" && count >= 4) {
-                    grandTotal = sum * 0.8;
-                    document.getElementById("grand-total").innerText =
-                      grandTotal;
+            document.getElementById("apply-coupon").classList.add("hidden");
+            //  const discountPriceText =
+            //    document.getElementById("discount-amount").innerText;
+            //    discountPriceText=grandTotal;
+          } else if (couponText === "Couple 20" && count >= 4) {
+            grandTotal = sum * 0.8;
+            document.getElementById("grand-total").innerText = grandTotal;
 
-                    document
-                      .getElementById("apply-coupon")
-                      .classList.add("hidden");
-                    //  const discountPriceText =
-                    //    document.getElementById("discount-amount").innerText;
-                    //    discountPriceText=grandTotal;
-                  } else {
-                    // console.log('pani kha');
-                    alert("Not eligible. You must have use valid coupon code");
-                  }
-               });
-        }
+            document.getElementById("apply-coupon").classList.add("hidden");
+          } else {
+            // console.log('pani kha');
+            alert("Not eligible. You must have use valid coupon code");
+          }
+        });
+      }
+
+      //next button
+
+      const btnNext = document.getElementById("next");
+      console.log(btnNext.innerText);
+      const num = document.getElementById("number");
+      // console.log(num.value.length);
+      
+      // console.log('value',btnNext.innerText);
+      if (count>0){
+
+        btnNext.disabled = false;
+        // if (num.value.length > 0) {
+        //   btnNext.disabled = false;
+        // }
+      }
 
       // console.log(sum);
     } else {
