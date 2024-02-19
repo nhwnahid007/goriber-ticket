@@ -76,7 +76,7 @@
       >
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
-            <h1 class="mb-5 p-5 text-4xl font-bold">
+            <h1 class="lg:mb-5 lg:p-5 text-4xl font-bold">
               <p>End-to-End Travel with</p>
               <p class="color-green">Goriber-Parhibahan</p>
             </h1>
@@ -84,7 +84,7 @@
               We are trusted Ticket booking site over 10 years in your nation
             </p>
             <a href="#ticket"
-              ><button class="btn bg-green border-none">Buy tickets</button></a
+              ><button class="btn bg-green border-none">Buy Tickets</button></a
             >
           </div>
         </div>
@@ -92,7 +92,7 @@
 
       <div
         id="header-bottom"
-        class="flex gap-10 w-8/12 mx-auto font-inter absolute top-[690px] right-[190px]"
+        class="hidden lg:flex gap-10 w-8/12 mx-auto font-inter absolute top-[690px] right-[190px]"
       >
         <div
           class="flex gap-2 bg-white rounded-3xl border-bottom p-3 items-center justify-center"
@@ -133,7 +133,7 @@
         <h1 class="text-4xl mb-10 font-bold text-center">
           Best offers for you
         </h1>
-        <div class="flex justify-evenly">
+        <div class="flex flex-col gap-2 md:flex-row justify-evenly">
           <div
             class="flex justify-evenly items-center h-56 w-[45%] rounded-lg bg-[#FFBF0F]"
           >
@@ -181,12 +181,12 @@
         <div
           class="flex bg-white items-center justify-between container mx-auto lg:px-24 px-8 my-8"
         >
-          <div class="p-10 rounded-2xl">
+          <div class=" lg:p-10 rounded-2xl">
             <div class="flex gap-12 justify-between items-center">
               <div class="flex gap-2 items-center">
                 <img src="images/bus-logo.png" alt="" />
                 <div>
-                  <h1 class="text-4xl font-bold">Greenline Paribahan</h1>
+                  <h1 class="text-4xl font-bold">Dour Paribahan</h1>
                   <p>Coach-009-WEB ! AC_Business</p>
                 </div>
               </div>
@@ -212,10 +212,10 @@
               <hr class="mt-5 dashed-line" />
             </div>
 
-            <div class="flex mt-6 justify-around">
-              <p class="btn">Boarding Point - Laxmipur</p>
-              <p class="btn">Dropping Point - Bogura</p>
-              <p class="btn">Est. Time - 11 Hour</p>
+            <div class="flex flex-wrap gap-2 mt-6 justify-around">
+              <p class="btn p-2">Boarding Point - Laxmipur</p>
+              <p class="btn p-2">Dropping Point - Bogura</p>
+              <p class="btn p-2">Est. Time - 11 Hour</p>
             </div>
           </div>
           <div>
@@ -233,7 +233,7 @@
 
       <div
         id="seat"
-        class="container bg-[#F7F8F8] flex justify-between mx-auto lg:px-24 px-8 my-8"
+        class="container bg-[#F7F8F8] flex flex-col lg:flex-row justify-between mx-auto lg:px-24 px-8 my-8"
       >
         <!-- left -->
         <div class="">
@@ -335,7 +335,7 @@
             <div id="append-container" class="appned-li"></div>
             <hr />
             <div class="flex justify-between">
-              <p>Total Price</p>
+              <p>Total Price: </p>
               <span id="total-price">0</span>
             </div>
             <div id="discount-section" class="flex hidden justify-between">
@@ -364,7 +364,7 @@
               </button>
             </div>
             <div class="flex justify-between">
-              <p>Grand Total</p>
+              <p>Grand Total:</p>
               <p>BDT <span id="grand-total">0</span></p>
             </div>
           </div>
@@ -437,7 +437,7 @@
     </dialog>
 
     <footer
-      class="flex justify-between items-center gap-20 p-10 bg-neutral text-neutral-content"
+      class="flex flex-col lg:flex-row justify-between items-center gap-20 p-10 bg-neutral text-neutral-content"
     >
       <div>
         <h1 class="text-5xl font-bold">Goriber-Ticket</h1>
@@ -468,3 +468,4 @@
     <script src="scripts/script.js"></script>
   </body>
 </html>
+

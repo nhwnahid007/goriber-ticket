@@ -116,7 +116,7 @@ for (const btn of btnElement) {
 
         console.log( typeof convertedKey);
 
-        if (count > 0 && convertedKey>=0 ) {
+        if (convertedKey >= 0 && count > 0) {
           btnNext.disabled = false;
           // if (num.value.length > 0) {
           //   btnNext.disabled = false;
