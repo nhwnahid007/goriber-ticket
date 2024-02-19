@@ -72,7 +72,7 @@
       <!-- Banner start -->
 
       <div
-        class="hero h-[600px] rounded-3xl bg-[url('images/banner.png')] bg-cover bg-no-repeat"
+        class="hero h-[600px] relative rounded-3xl bg-[url('images/banner.png')] bg-cover bg-no-repeat"
       >
         <div class="hero-content text-center text-neutral-content">
           <div class="max-w-md">
@@ -83,7 +83,44 @@
             <p class="mb-5">
               We are trusted Ticket booking site over 10 years in your nation
             </p>
-            <a href="#ticket"><button class="btn bg-green border-none">Buy tickets</button></a>
+            <a href="#ticket"
+              ><button class="btn bg-green border-none">Buy tickets</button></a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="header-bottom"
+        class="flex gap-10 w-8/12 mx-auto font-inter absolute top-[690px] right-[190px]"
+      >
+        <div
+          class="flex gap-2 bg-white rounded-3xl border-bottom p-3 items-center justify-center"
+        >
+          <img src="images/people.png" alt="" />
+          <div class="">
+            <p class="text-3xl font-bold">500k+</p>
+            <p>Registered Users</p>
+          </div>
+        </div>
+
+        <div
+          class="flex gap-2 bg-white rounded-3xl border-bottom p-3 items-center justify-center"
+        >
+          <img src="images/ticket-cupon.png" alt="" />
+          <div class="">
+            <p class="text-3xl font-bold">1.7 lacks</p>
+            <p>Ticket sold</p>
+          </div>
+        </div>
+
+        <div
+          class="flex gap-2 bg-white rounded-3xl border-bottom p-3 items-center justify-center"
+        >
+          <img src="images/stoppage.png" alt="" />
+          <div class="">
+            <p class="text-3xl font-bold">80k+</p>
+            <p>Rental Partner</p>
           </div>
         </div>
       </div>
@@ -194,15 +231,19 @@
 
       <!-- Seat section starts here -->
 
-      <div id="seat" class="container bg-[#F7F8F8] flex justify-between mx-auto lg:px-24 px-8 my-8">
+      <div
+        id="seat"
+        class="container bg-[#F7F8F8] flex justify-between mx-auto lg:px-24 px-8 my-8"
+      >
         <!-- left -->
         <div class="">
           <p class="font-semibold text-2xl">select Your Seat</p>
           <hr class="mt-5 dashed-line" />
           <div class="flex items-center justify-between">
             <button class="flex">
-              <img src="images/seat-gray.png" alt="">
-              Available</button>
+              <img src="images/seat-gray.png" alt="" />
+              Available
+            </button>
 
             <button class="flex color-green">
               <img src="images/seat-green-filled.png" alt="" />Selected
@@ -281,14 +322,17 @@
 
           <div class="p-5 font-inter bg-[#F7F8F8]">
             <div class="flex justify-between">
-              <p>Seat <span id="added-seat" class="rounded-md px-2 bg-[#1DD100]">0</span></p>
+              <p>
+                Seat
+                <span id="added-seat" class="rounded-md px-2 bg-[#1DD100]"
+                  >0</span
+                >
+              </p>
               <p>Class</p>
               <p>Price</p>
             </div>
             <hr class="mt-5 dashed-line" />
-            <div id="append-container" class="appned-li">
-              
-            </div>
+            <div id="append-container" class="appned-li"></div>
             <hr />
             <div class="flex justify-between">
               <p>Total Price</p>
@@ -298,14 +342,24 @@
               <p>Discounted amount:</p>
               <span id="discounted-price">0</span>
             </div>
-            
 
-
-            <div id="apply-coupon"
-              class=" my-5 bg-white rounded-lg justify-between flex "
+            <div
+              id="apply-coupon"
+              class="my-5 bg-white rounded-lg justify-between flex"
             >
-              <input id="coupon" class="px-2" type="text" name="" id="" placeholder="Have any copupon?" />
-              <button disabled id="apply" class="btn rounded-md bg-[#1dd100] px-4 text-white">
+              <input
+                id="coupon"
+                class="px-2"
+                type="text"
+                name=""
+                id=""
+                placeholder="Have any copupon?"
+              />
+              <button
+                disabled
+                id="apply"
+                class="btn rounded-md bg-[#1dd100] px-4 text-white"
+              >
                 Apply
               </button>
             </div>
@@ -313,18 +367,42 @@
               <p>Grand Total</p>
               <p>BDT <span id="grand-total">0</span></p>
             </div>
-            
           </div>
           <form class="mt-10" action="">
             <label class="text-2xl font-semibold" for="">Passenger Name*</label>
-            <input class="w-full p-3 border-2 border-[#0307121A] rounded-lg" type="text" name="" id="" placeholder="Enter your name">
+            <input
+              class="w-full p-3 border-2 border-[#0307121A] rounded-lg"
+              type="text"
+              name=""
+              id=""
+              placeholder="Enter your name"
+            />
             <label class="text-2xl font-semibold" for="">Phone Number*</label>
-            <input id="number" class="w-full p-3 border-2 border-[#0307121A] rounded-lg" type="number" name="" id="" placeholder="Enter your phone number">
+            <input
+              id="number"
+              class="w-full p-3 border-2 border-[#0307121A] rounded-lg"
+              type="number"
+              name=""
+              id=""
+              placeholder="Enter your phone number"
+            />
             <label class="text-2xl font-semibold" for="">Email Id*</label>
-            <input class="w-full p-3 border-2 border-[#0307121A] rounded-lg" type="email" name="" id="" placeholder="Enter your Email id">
-        </form>
-        <button onclick="my_modal_5.showModal()" disabled id="next" class="btn w-full mt-5 rounded-lg py-3 bg-[#1dd100]
-         text-white">Next</button>
+            <input
+              class="w-full p-3 border-2 border-[#0307121A] rounded-lg"
+              type="email"
+              name=""
+              id=""
+              placeholder="Enter your Email id"
+            />
+          </form>
+          <button
+            onclick="my_modal_5.showModal()"
+            disabled
+            id="next"
+            class="btn w-full mt-5 rounded-lg py-3 bg-[#1dd100] text-white"
+          >
+            Next
+          </button>
           <div class="flex mt-5 justify-between">
             <p>Terms and Conditions</p>
             <p>Cancellation Policy</p>
@@ -333,21 +411,59 @@
       </div>
     </main>
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-   <div class="modal-box flex flex-col items-center justify-center ">
-     <img class="w-44" src="images/success.png" alt="">
-     <h1 class="text-green-500 text-3xl font-black">Success</h1>
-    <p class="font-medium text-2xl">Thank you for Booking Our Bus Seats. 
-     We are working hard to find the best service and deals for you. </p>
-    <p>Shortly you will find a confirmation in your email.</p>
-    <button>COntinue</button>
-    <div class="modal-action">
-      <form method="dialog">
-        <!-- if there is a button in form, it will close the modal -->
-        <button  onClick="window.location.reload()" class="btn bg-green text-white px-10">Continue</button>
-      </form>
-    </div>
-  </div>
-</dialog>
+      <div class="modal-box flex flex-col items-center justify-center">
+        <img class="w-44" src="images/success.png" alt="" />
+        <h1 class="text-green-500 text-3xl font-black">Success</h1>
+        <p class="font-medium text-center text-2xl">
+          Thank you for Booking Our Bus Seats. We are working hard to find the
+          best service and deals for you.
+        </p>
+        <p class="text-center">
+          Shortly you will find a confirmation in your email.
+        </p>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              onClick="window.location.reload()"
+              class="btn bg-green text-white px-10"
+            >
+              Continue
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <footer
+      class="flex justify-between items-center gap-20 p-10 bg-neutral text-neutral-content"
+    >
+      <div>
+        <h1 class="text-5xl font-bold">Goriber-Ticket</h1>
+        <p class="pt-2">A modern platform to make your routing better than ever.</p>
+
+        <p class="pt-5">
+          @all rights reserved, Goriber-Ticket services limited.2024
+        </p>
+      </div>
+
+      <div>
+        <h6 class="text-center text-3xl font-bold">Download from The app</h6>
+        <div class="border-2 w-2/4 mx-auto gap-2 rounded-md p-2 flex">
+          <img src="images/playstore.png" alt="" />
+          <div class="">
+            Get it on <br />
+            <p class="font-semibold text-2xl">Google play</p>
+          </div>
+        </div>
+        <div class="flex gap-3">
+          <a href="">Privacy policy</a>
+          <a href="">Terms & condition</a>
+          <a href="">Return & refund policy</a>
+        </div>
+      </div>
+    </footer>
 
     <script src="scripts/script.js"></script>
   </body>
