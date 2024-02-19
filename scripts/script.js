@@ -62,21 +62,37 @@ for (const btn of btnElement) {
         document.getElementById("apply").disabled = false;
         document.getElementById("apply").addEventListener("click", function () {
           const couponText = document.getElementById("coupon").value;
-          console.log(couponText);
+        //   console.log(couponText);
 
           if (couponText === "NEW15" && count >= 4) {
             grandTotal = sum * 0.85;
             document.getElementById("grand-total").innerText = grandTotal;
 
+            let grandTotalDiscount = sum - grandTotal;
+            // console.log(grandTotalDiscount);
+            document.getElementById("discounted-price").innerText =
+              grandTotalDiscount;
+
             document.getElementById("apply-coupon").classList.add("hidden");
+            document.getElementById("discount-section")
+              .classList.remove("hidden");
             //  const discountPriceText =
             //    document.getElementById("discount-amount").innerText;
             //    discountPriceText=grandTotal;
           } else if (couponText === "Couple 20" && count >= 4) {
             grandTotal = sum * 0.8;
             document.getElementById("grand-total").innerText = grandTotal;
+            let grandTotalDiscount=sum-grandTotal;
+            // console.log(grandTotalDiscount);
+            document.getElementById("discounted-price").innerText =
+              grandTotalDiscount;
+
 
             document.getElementById("apply-coupon").classList.add("hidden");
+            document
+              .getElementById("discount-section")
+              .classList.remove("hidden");
+
           } else {
             // console.log('pani kha');
             alert("Not eligible. You must have use valid coupon code");
@@ -87,18 +103,27 @@ for (const btn of btnElement) {
       //next button
 
       const btnNext = document.getElementById("next");
-      console.log(btnNext.innerText);
+    //   console.log(btnNext.innerText);
       const num = document.getElementById("number");
       // console.log(num.value.length);
-      
-      // console.log('value',btnNext.innerText);
-      if (count>0){
 
-        btnNext.disabled = false;
-        // if (num.value.length > 0) {
-        //   btnNext.disabled = false;
-        // }
-      }
+      // console.log('value',btnNext.innerText);
+
+      num.addEventListener('keyup',function(event){
+        // console.log(event.key);
+        convertedKey=parseInt(event.key);
+        console.log(event.key.length);
+
+        console.log( typeof convertedKey);
+
+        if (count > 0 && convertedKey>=0 ) {
+          btnNext.disabled = false;
+          // if (num.value.length > 0) {
+          //   btnNext.disabled = false;
+          // }
+        }
+      })
+      
 
       // console.log(sum);
     } else {
