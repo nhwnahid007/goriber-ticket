@@ -323,7 +323,7 @@
             <label class="text-2xl font-semibold" for="">Email Id*</label>
             <input class="w-full p-3 border-2 border-[#0307121A] rounded-lg" type="email" name="" id="" placeholder="Enter your Email id">
         </form>
-        <button disabled id="next" class="btn w-full mt-5 rounded-lg py-3 bg-[#1dd100]
+        <button onclick="my_modal_5.showModal()" disabled id="next" class="btn w-full mt-5 rounded-lg py-3 bg-[#1dd100]
          text-white">Next</button>
           <div class="flex mt-5 justify-between">
             <p>Terms and Conditions</p>
@@ -332,6 +332,22 @@
         </div>
       </div>
     </main>
+    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+   <div class="modal-box flex flex-col items-center justify-center ">
+     <img class="w-44" src="images/success.png" alt="">
+     <h1 class="text-green-500 text-3xl font-black">Success</h1>
+    <p class="font-medium text-2xl">Thank you for Booking Our Bus Seats. 
+     We are working hard to find the best service and deals for you. </p>
+    <p>Shortly you will find a confirmation in your email.</p>
+    <button>COntinue</button>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button  onClick="window.location.reload()" class="btn bg-green text-white px-10">Continue</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
     <script src="scripts/script.js"></script>
   </body>
